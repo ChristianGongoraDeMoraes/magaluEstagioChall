@@ -2,6 +2,7 @@ package malu.malu.service;
 
 import java.time.LocalDateTime;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -15,6 +16,7 @@ import malu.malu.repository.AgendamentoRepository;
 @Service
 @RequiredArgsConstructor
 public class AgendamentoService {
+    @Autowired
     private AgendamentoRepository agendamentoRepository;
 
     public AgendamentoResponseDto agendar(AgendamentoRequestDto agendamentoRequestDto){
